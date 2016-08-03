@@ -1,4 +1,4 @@
-var argv = require('yargs').argv
+var argv = require('yargs').command().argv
 var command = argv._[0]
 
 console.log(argv)
@@ -11,6 +11,6 @@ else if((command == 'hello')&&(typeof argv.name !== 'undefined')) {
     console.log('hello ' + argv.name + '!')
 }
 
-else {
+else if(command == 'hello'){
     console.log('Hello world')
 }
